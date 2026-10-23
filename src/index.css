@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: #FBF9F5;
+    color: #302B27;
+    font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* Custom subtle scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #F5F0E8;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #C8AE83;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #A38456;
+  }
+}
+
+@layer utilities {
+  .text-shadow-gold {
+    text-shadow: 0 1px 2px rgba(200, 174, 131, 0.25);
+  }
+
+  /* Stationery paper subtle grain */
+  .paper-texture {
+    background-color: #FBF9F5;
+    background-image: radial-gradient(#E6D8C1 0.65px, transparent 0.65px);
+    background-size: 24px 24px;
+  }
+
+  .gold-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, #C8AE83 50%, transparent 100%);
+  }
+
+  .gold-border-double {
+    border: 1px solid #E6D8C1;
+    position: relative;
+  }
+  .gold-border-double::after {
+    content: '';
+    position: absolute;
+    inset: 3px;
+    border: 1px solid rgba(200, 174, 131, 0.4);
+    pointer-events: none;
+  }
+
+  /* Safe areas for iOS */
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 1rem);
+  }
+  .safe-right {
+    right: calc(1rem + env(safe-area-inset-right, 0px));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
