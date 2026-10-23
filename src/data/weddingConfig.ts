@@ -65,8 +65,8 @@ export const weddingConfig: WeddingConfig = {
   },
 
   // 4. NGÀY CƯỚI CHÍNH & ĐỒNG HỒ ĐẾM NGƯỢC (WEDDING DATE & COUNTDOWN)
-  weddingDateIso: "2026-12-12T11:30:00+07:00",
-  weddingDateDisplay: "12 . 12 . 2026 (Nhằm 04-11 năm Bính Ngọ)",
+  weddingDateIso: "2026-12-27T11:30:00+07:00",
+  weddingDateDisplay: "27 . 12 . 2026 (Nhằm 19-11 năm Bính Ngọ)",
   timezone: "Asia/Ho_Chi_Minh",
   countdownSubtext: "Chúng mình đang háo hức chờ đón ngày đặc biệt này.",
 
@@ -74,7 +74,7 @@ export const weddingConfig: WeddingConfig = {
   opening: {
     title: "WEDDING INVITATION",
     subtitle: "LỄ THÀNH HÔN",
-    dateDisplay: "12-12-2026",
+    dateDisplay: "27-12-2026",
     buttonText: "Mở thiệp",
     helperText: "Chạm để mở lời mời & lắng nghe điệu nhạc",
     envelopeSealInitial: "Đ & T",
@@ -202,25 +202,26 @@ export const weddingConfig: WeddingConfig = {
     {
       id: "event-tieccuoi",
       title: "Lễ Thành Hôn",
-      subtitle: "Trung Tâm Hội Nghị Tiệc Cưới DIAMOND PLACE",
-      date: "12-12-2026 (Nhằm 04-11 năm Bính Ngọ)",
+      subtitle: "Tại Tư Gia Nhà Trai",
+      date: "27.12.2026 (Nhằm 19-11 năm Bính Ngọ)",
       timeDisplay: "11:30 Sáng",
-      startTimeIso: "2026-12-12T11:30:00+07:00",
-      endTimeIso: "2026-12-12T14:30:00+07:00",
-      venueName: "DIAMOND PLACE - Sảnh Sapphire",
-      address: "15A Hồ Văn Huê, Phường Đức Nhuận, TP.HCM (Quận Phú Nhuận cũ)",
+      startTimeIso: "2026-12-27T11:30:00+07:00",
+      endTimeIso: "2026-12-27T14:30:00+07:00",
+      venueName: "Tại Tư Gia Nhà Trai",
+      address: "Số 72/23/3, tổ 10, ấp Sông Co, xã An Long, TP.HCM (tỉnh Bình Dương cũ)",
       note: "Sự hiện diện của quý khách là niềm vinh hạnh lớn nhất cho gia đình Nhà Trai chúng mình.",
       dressCode: "Trắng Ivory, Be Nhạt, Vàng Champagne, Đen Lịch Sự",
-      mapUrl: "https://maps.app.goo.gl/dqcGupqv2gX6qZLL9",
+      mapUrl: "https://maps.app.goo.gl/froHcrxCZuZbKhCK9",
     },
   ],
 
   // 11. LỊCH TRÌNH NGÀY CƯỚI (DAY TIMELINE)
   timeline: [
-    { id: "tl-1", time: "11:30", title: "Đón khách & Chụp ảnh lưu niệm", description: "Chào đón quan khách, chụp ảnh kỷ niệm tại khu vực backdrop", iconName: "camera" },
-    { id: "tl-2", time: "11:45", title: "Nghi thức Hôn lễ", description: "Thành Đạt & Xuân Thuỳ bước vào lễ đường, trao nhẫn và cắt bánh cưới", iconName: "heart" },
-    { id: "tl-3", time: "12:00", title: "Khai tiệc mừng", description: "Thưởng thức ẩm thực tinh hoa trong không gian âm nhạc ấm cúng", iconName: "wine" },
-    { id: "tl-4", time: "12:10", title: "Giao lưu & Âm nhạc", description: "Trò chuyện, chúc mừng và những điệu nhạc ngọt ngào", iconName: "sparkles" },
+    { id: "tl-0", time: "09:00", title: "Cử hành hôn lễ", description: "Nghi thức hôn lễ truyền thống tại tư gia", iconName: "heart" },
+    { id: "tl-1", time: "10:30", title: "Đón khách & Chụp ảnh lưu niệm", description: "Chào đón quan khách, chụp ảnh kỷ niệm tại khu vực backdrop", iconName: "camera" },
+    { id: "tl-2", time: "11:00", title: "Nghi thức Hôn lễ", description: "Thành Đạt & Xuân Thuỳ bước vào lễ đường, trao nhẫn và cắt bánh cưới", iconName: "sparkles" },
+    { id: "tl-3", time: "11:15", title: "Khai tiệc mừng", description: "Thưởng thức ẩm thực tinh hoa trong không gian âm nhạc ấm cúng", iconName: "wine" },
+    { id: "tl-4", time: "11:30", title: "Giao lưu & Âm nhạc", description: "Trò chuyện, chúc mừng và những điệu nhạc ngọt ngào", iconName: "music" },
   ],
 
   // 12. QUY ĐỊNH TRANG PHỤC (DRESS CODE)
@@ -242,17 +243,17 @@ export const weddingConfig: WeddingConfig = {
     {
       id: "faq-1",
       question: "Lễ cưới diễn ra vào ngày nào và mấy giờ?",
-      answer: "Tiệc cưới Lễ Thành Hôn mừng ngày chung đôi của Thành Đạt & Xuân Thuỳ sẽ diễn ra vào lúc 11:30 trưa Thứ Bảy, ngày 12 tháng 12 năm 2026 (nhằm ngày 04 tháng 11 năm Bính Ngọ) tại Sảnh Sapphire, DIAMOND PLACE (15A Hồ Văn Huê, Phú Nhuận).",
+      answer: "Tiệc cưới Lễ Thành Hôn mừng ngày chung đôi của Thành Đạt & Xuân Thuỳ sẽ diễn ra vào lúc 11:30 trưa Chủ Nhật, ngày 27 tháng 12 năm 2026 (nhằm ngày 19 tháng 11 năm Bính Ngọ) tại Tư Gia Nhà Trai (Số 72/23/3, tổ 10, ấp Sông Co, xã An Long, TP.HCM (tỉnh Bình Dương cũ)).",
     },
     {
       id: "faq-2",
       question: "Tôi có thể xem đường đi đến địa điểm như thế nào?",
-      answer: "Bạn chỉ cần nhấn vào nút 'Chỉ đường' ở mục Thông Tin Buổi Lễ, Google Maps sẽ tự động chỉ dẫn tuyến đường thuận tiện nhất đến DIAMOND PLACE.",
+      answer: "Bạn chỉ cần nhấn vào nút 'Chỉ đường' ở mục Thông Tin Buổi Lễ, Google Maps sẽ tự động chỉ dẫn tuyến đường thuận tiện nhất đến Tư Gia Nhà Trai.",
     },
     {
       id: "faq-3",
       question: "Có chỗ đỗ xe tại địa điểm tổ chức không?",
-      answer: "DIAMOND PLACE có khu vực giữ xe ô tô và xe máy rộng rãi với đội ngũ nhân viên an ninh hướng dẫn tận tình, hoàn toàn miễn phí cho khách dự tiệc.",
+      answer: "Tại tư gia có khu vực đỗ xe rộng rãi với người hướng dẫn chu đáo, hoàn toàn thuận tiện cho khách đi xe máy và ô tô.",
     },
   ],
 
