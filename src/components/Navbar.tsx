@@ -95,41 +95,44 @@ export const Navbar: React.FC<NavbarProps> = ({ config, isSampleMode, onToggleSa
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        {/* Monogram Brand - Tách biệt rõ ràng với chữ Trang chủ */}
-        <a
-          href="#hero"
-          onClick={(e) => handleNavClick(e, '#hero')}
-          className="group flex items-center shrink-0 focus:outline-none mr-8 lg:mr-10 xl:mr-14"
-          aria-label="Về đầu trang"
-        >
-          <img
-            src="/images/monogram_gold.png"
-            alt={monogram}
-            className="h-8 sm:h-9 w-auto object-contain transition-transform duration-300 group-hover:scale-105 select-none"
-          />
-        </a>
+        {/* Left: Brand Monogram + Desktop Navigation Links with balanced proportional spacing */}
+        <div className="flex items-center gap-6 xl:gap-8">
+          {/* Monogram Brand */}
+          <a
+            href="#hero"
+            onClick={(e) => handleNavClick(e, '#hero')}
+            className="group flex items-center shrink-0 focus:outline-none py-1"
+            aria-label="Về đầu trang"
+          >
+            <img
+              src="/images/monogram_gold.png"
+              alt={monogram}
+              className="h-7 sm:h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-105 select-none"
+            />
+          </a>
 
-        {/* Desktop Navigation Links */}
-        <nav className="hidden lg:flex items-center gap-x-4 xl:gap-x-6 2xl:gap-x-7 flex-1 justify-center">
-          {navItems.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              onClick={(e) => handleNavClick(e, item.href)}
-              className="text-[11px] xl:text-xs font-sans tracking-[0.14em] xl:tracking-[0.18em] uppercase text-ink-muted hover:text-champagne-gold transition-colors duration-200 py-1 relative group whitespace-nowrap shrink-0"
-            >
-              {item.label}
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-champagne-gold transition-all duration-300 group-hover:w-full" />
-            </a>
-          ))}
-        </nav>
+          {/* Desktop Navigation Links */}
+          <nav className="hidden lg:flex items-center gap-x-4 xl:gap-x-6">
+            {navItems.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                onClick={(e) => handleNavClick(e, item.href)}
+                className="text-[11px] xl:text-xs font-sans tracking-[0.14em] xl:tracking-[0.16em] uppercase text-ink-muted hover:text-champagne-gold transition-colors duration-200 py-1 relative group whitespace-nowrap shrink-0"
+              >
+                {item.label}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-champagne-gold transition-all duration-300 group-hover:w-full" />
+              </a>
+            ))}
+          </nav>
+        </div>
 
         {/* Right tools: Preview Toggle & Mobile Menu */}
-        <div className="flex items-center gap-2 sm:gap-3 shrink-0 ml-4 xl:ml-8">
+        <div className="flex items-center gap-2 sm:gap-3 shrink-0">
           {/* Subtle Demo Preview Toggle button so owner can test full layout */}
           <button
             onClick={onToggleSampleMode}
-            className={`hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-sans tracking-wider border transition-all ${
+            className={`hidden xl:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-sans tracking-wider border transition-all ${
               isSampleMode
                 ? 'bg-champagne-gold/15 text-champagne-gold-dark border-champagne-gold font-medium'
                 : 'bg-ivory-50/80 text-ink-muted border-champagne-border hover:border-champagne-gold/60'
