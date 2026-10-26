@@ -94,12 +94,13 @@ export const Navbar: React.FC<NavbarProps> = ({ config, isSampleMode, onToggleSa
           : 'bg-transparent py-5'
       }`}
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between">
-        {/* Monogram Brand */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+        {/* Monogram Brand - Tách biệt rõ ràng với chữ Trang chủ */}
         <a
           href="#hero"
           onClick={(e) => handleNavClick(e, '#hero')}
-          className="group flex items-center gap-2 focus:outline-none"
+          className="group flex items-center shrink-0 focus:outline-none mr-8 lg:mr-10 xl:mr-14"
+          aria-label="Về đầu trang"
         >
           <img
             src="/images/monogram_gold.png"
@@ -109,13 +110,13 @@ export const Navbar: React.FC<NavbarProps> = ({ config, isSampleMode, onToggleSa
         </a>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden lg:flex items-center space-x-7">
+        <nav className="hidden lg:flex items-center gap-x-4 xl:gap-x-6 2xl:gap-x-7 flex-1 justify-center">
           {navItems.map((item) => (
             <a
               key={item.href}
               href={item.href}
               onClick={(e) => handleNavClick(e, item.href)}
-              className="text-xs font-sans tracking-[0.18em] uppercase text-ink-muted hover:text-champagne-gold transition-colors duration-200 py-1 relative group"
+              className="text-[11px] xl:text-xs font-sans tracking-[0.14em] xl:tracking-[0.18em] uppercase text-ink-muted hover:text-champagne-gold transition-colors duration-200 py-1 relative group whitespace-nowrap shrink-0"
             >
               {item.label}
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-champagne-gold transition-all duration-300 group-hover:w-full" />
@@ -124,7 +125,7 @@ export const Navbar: React.FC<NavbarProps> = ({ config, isSampleMode, onToggleSa
         </nav>
 
         {/* Right tools: Preview Toggle & Mobile Menu */}
-        <div className="flex items-center gap-2 sm:gap-3">
+        <div className="flex items-center gap-2 sm:gap-3 shrink-0 ml-4 xl:ml-8">
           {/* Subtle Demo Preview Toggle button so owner can test full layout */}
           <button
             onClick={onToggleSampleMode}
@@ -159,7 +160,7 @@ export const Navbar: React.FC<NavbarProps> = ({ config, isSampleMode, onToggleSa
                 key={item.href}
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
-                className="text-sm font-sans tracking-widest uppercase text-ink-muted hover:text-champagne-gold transition-colors py-1"
+                className="text-sm font-sans tracking-widest uppercase text-ink-muted hover:text-champagne-gold transition-colors py-1 whitespace-nowrap"
               >
                 {item.label}
               </a>
