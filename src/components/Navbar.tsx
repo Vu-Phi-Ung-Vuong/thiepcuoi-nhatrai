@@ -94,9 +94,23 @@ export const Navbar: React.FC<NavbarProps> = ({ config, isSampleMode, onToggleSa
           : 'bg-transparent py-5'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        {/* Left: Brand Monogram + Desktop Navigation Links with balanced proportional spacing */}
-        <div className="flex items-center gap-6 xl:gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative flex items-center justify-between">
+        {/* Mobile Brand Logo (Chỉ hiển thị trên mobile ở góc trái) */}
+        <a
+          href="#hero"
+          onClick={(e) => handleNavClick(e, '#hero')}
+          className="lg:hidden group flex items-center shrink-0 focus:outline-none py-1"
+          aria-label="Về đầu trang"
+        >
+          <img
+            src="/images/monogram_gold.png"
+            alt={monogram}
+            className="h-7 sm:h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-105 select-none"
+          />
+        </a>
+
+        {/* Desktop: Toàn bộ thanh menu (Logo + Các mục điều hướng) được CĂN CHÍNH GIỮA TRANG WEB */}
+        <div className="hidden lg:flex items-center justify-center mx-auto gap-6 xl:gap-8">
           {/* Monogram Brand */}
           <a
             href="#hero"
@@ -111,8 +125,8 @@ export const Navbar: React.FC<NavbarProps> = ({ config, isSampleMode, onToggleSa
             />
           </a>
 
-          {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-x-4 xl:gap-x-6">
+          {/* Desktop Navigation Links (Giữ nguyên khoảng cách cân đối đã được duyệt) */}
+          <nav className="flex items-center gap-x-4 xl:gap-x-6">
             {navItems.map((item) => (
               <a
                 key={item.href}
@@ -127,12 +141,12 @@ export const Navbar: React.FC<NavbarProps> = ({ config, isSampleMode, onToggleSa
           </nav>
         </div>
 
-        {/* Right tools: Preview Toggle & Mobile Menu */}
-        <div className="flex items-center gap-2 sm:gap-3 shrink-0">
-          {/* Subtle Demo Preview Toggle button so owner can test full layout */}
+        {/* Right tools: Mobile Menu button (trên mobile) & nút Xem mẫu demo (ở góc phải nếu có) */}
+        <div className="flex items-center gap-2 sm:gap-3 shrink-0 lg:absolute lg:right-6 xl:right-8">
+          {/* Subtle Demo Preview Toggle button (chỉ hiển thị ở góc phải trên màn hình cực rộng để không lệch tâm menu) */}
           <button
             onClick={onToggleSampleMode}
-            className={`hidden xl:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-sans tracking-wider border transition-all ${
+            className={`hidden 2xl:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-sans tracking-wider border transition-all ${
               isSampleMode
                 ? 'bg-champagne-gold/15 text-champagne-gold-dark border-champagne-gold font-medium'
                 : 'bg-ivory-50/80 text-ink-muted border-champagne-border hover:border-champagne-gold/60'
