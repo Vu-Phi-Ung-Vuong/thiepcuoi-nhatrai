@@ -3,7 +3,7 @@ import type { WeddingConfig } from '../types/wedding';
 /**
  * =========================================================================
  * BẢNG ĐIỀU KHIỂN NỘI DUNG ĐÁM CƯỚI (CENTRAL WEDDING CONFIGURATION)
- * PHIÊN BẢN NHÀ TRAI - LỄ THÀNH HÔN
+ * PHIÊN BẢN NHÀ TRAI - LỄ TÂN HÔN
  * =========================================================================
  * 
  * Thông tin chính thức của Cặp đôi:
@@ -11,13 +11,13 @@ import type { WeddingConfig } from '../types/wedding';
  */
 
 export const weddingConfig: WeddingConfig = {
-  // Định danh phiên bản: Nhà Trai (Lễ Thành Hôn - Tên Chú Rể đứng trước)
+  // Định danh phiên bản: Nhà Trai (Lễ Tân Hôn - Tên Chú Rể đứng trước)
   partyType: "nhatrai",
 
   // 1. CẤU HÌNH TIÊU ĐỀ & CHIA SẺ MẠNG XÃ HỘI (SEO & SOCIAL SHARE)
   meta: {
-    title: "Thành Đạt & Xuân Thuỳ | Lễ Thành Hôn",
-    description: "Gia đình Nhà Trai trân trọng kính mời quý khách tham dự Lễ Thành Hôn của Thành Đạt & Xuân Thuỳ.",
+    title: "Thành Đạt & Xuân Thuỳ | Lễ Tân Hôn",
+    description: "Gia đình Nhà Trai trân trọng kính mời quý khách tham dự Lễ Tân Hôn của Thành Đạt & Xuân Thuỳ.",
     ogImage: "/images/BIADatThuy_5920.jpg",
   },
 
@@ -73,7 +73,7 @@ export const weddingConfig: WeddingConfig = {
   // 5. TRẢI NGHIỆM MỞ THIỆP ĐẦU TIÊN (ENVELOPE OPENING EXPERIENCE)
   opening: {
     title: "WEDDING INVITATION",
-    subtitle: "LỄ THÀNH HÔN",
+    subtitle: "LỄ TÂN HÔN",
     dateDisplay: "27-12-2026",
     buttonText: "Mở thiệp",
     helperText: "Chạm để mở lời mời & lắng nghe điệu nhạc",
@@ -201,7 +201,7 @@ export const weddingConfig: WeddingConfig = {
   events: [
     {
       id: "event-tieccuoi",
-      title: "Lễ Thành Hôn",
+      title: "Lễ Tân Hôn",
       subtitle: "Tại Tư Gia Nhà Trai",
       date: "27.12.2026 (Nhằm 19-11 năm Bính Ngọ)",
       timeDisplay: "11:30 Sáng",
@@ -243,7 +243,7 @@ export const weddingConfig: WeddingConfig = {
     {
       id: "faq-1",
       question: "Lễ cưới diễn ra vào ngày nào và mấy giờ?",
-      answer: "Tiệc cưới Lễ Thành Hôn mừng ngày chung đôi của Thành Đạt & Xuân Thuỳ sẽ diễn ra vào lúc 11:30 trưa Chủ Nhật, ngày 27 tháng 12 năm 2026 (nhằm ngày 19 tháng 11 năm Bính Ngọ) tại Tư Gia Nhà Trai (Số 72/23/3, tổ 10, ấp Sông Co, xã An Long, TP.HCM (tỉnh Bình Dương cũ)).",
+      answer: "Tiệc cưới Lễ Tân Hôn mừng ngày chung đôi của Thành Đạt & Xuân Thuỳ sẽ diễn ra vào lúc 11:30 trưa Chủ Nhật, ngày 27 tháng 12 năm 2026 (nhằm ngày 19 tháng 11 năm Bính Ngọ) tại Tư Gia Nhà Trai (Số 72/23/3, tổ 10, ấp Sông Co, xã An Long, TP.HCM (tỉnh Bình Dương cũ)).",
     },
     {
       id: "faq-2",
